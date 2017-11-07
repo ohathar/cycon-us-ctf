@@ -1,0 +1,30 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+</head>
+
+<div class="container">
+<pre>
+ _______           _______  _______  _                        _______                  _______ _________ _______ 
+(  ____ \|\     /|(  ____ \(  ___  )( (    /|       |\     /|(  ____ \                (  ____ \\__   __/(  ____ \
+| (    \/( \   / )| (    \/| (   ) ||  \  ( |       | )   ( || (    \/                | (    \/   ) (   | (    \/
+| |       \ (_) / | |      | |   | ||   \ | | _____ | |   | || (_____    _____  _____ | |         | |   | (__    
+| |        \   /  | |      | |   | || (\ \) |(_____)| |   | |(_____  )  (_____)(_____)| |         | |   |  __)   
+| |         ) (   | |      | |   | || | \   |       | |   | |      ) |                | |         | |   | (      
+| (____/\   | |   | (____/\| (___) || )  \  |       | (___) |/\____) |                | (____/\   | |   | )      
+(_______/   \_/   (_______/(_______)|/    )_)       (_______)\_______)                (_______/   )_(   |/       
+                                                                                                                 
+
+
+</pre>
+</div>
+<center>{% if not session.get('userid') %}<a href="/login">Login</a>{% else %}<a href="/logout">Logout</a> || <a href="/problems">Problems</a>{% endif %} || <a href="/scores">Scoreboard</a></center>
+
+<br /><br />
+<div class="container">
+	<pre>
+	{% for score in score_data %}
+	{{ loop.index }} {{ score.get('username')}} {{ score.get('score') }}
+	{% endfor %}
+	</pre>
+</div>

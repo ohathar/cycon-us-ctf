@@ -1,0 +1,33 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+</head>
+
+<div class="container">
+<pre>
+ _______           _______  _______  _                        _______                  _______ _________ _______ 
+(  ____ \|\     /|(  ____ \(  ___  )( (    /|       |\     /|(  ____ \                (  ____ \\__   __/(  ____ \
+| (    \/( \   / )| (    \/| (   ) ||  \  ( |       | )   ( || (    \/                | (    \/   ) (   | (    \/
+| |       \ (_) / | |      | |   | ||   \ | | _____ | |   | || (_____    _____  _____ | |         | |   | (__    
+| |        \   /  | |      | |   | || (\ \) |(_____)| |   | |(_____  )  (_____)(_____)| |         | |   |  __)   
+| |         ) (   | |      | |   | || | \   |       | |   | |      ) |                | |         | |   | (      
+| (____/\   | |   | (____/\| (___) || )  \  |       | (___) |/\____) |                | (____/\   | |   | )      
+(_______/   \_/   (_______/(_______)|/    )_)       (_______)\_______)                (_______/   )_(   |/       
+                                                                                                                 
+
+
+</pre>
+</div>
+<center><a href="/login">Login</a> || <a href="/scores">Scoreboard</a></center>
+<br /><br />
+{% if message != '' %}
+<div class="be_red_and_centered">{{ message }}</div>
+<br /><br />
+{% endif %}
+<center>
+	<form method="post" action="/login">
+		UserName: <input type="text" name="username" /><br />
+		PassWord: <input type="password" name="password" /><br /><br />
+		<input type="submit" value="login" name="submit" /> || <input type="submit" value="register" name="submit" /><br />
+	</form>
+</center>
