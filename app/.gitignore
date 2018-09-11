@@ -1,6 +1,6 @@
 # no secrets for you!
 config.txt
-cwnf.service
+ctf.service
 nginx_config.conf
 # no sockets
 app.sock
